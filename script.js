@@ -21,6 +21,7 @@ createApp({
         aggiungi(){
             let add = {...this.nuova};
             this.cose.push(add)
+            this.nuova.daFare = ""
         },
         rimuovi(pos){
             this.cose.splice(pos,1)
