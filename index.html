@@ -14,12 +14,12 @@
     <div id="app">
         <div class="row justify-content-center">
             <div class="col-8 bg-primary">
-                <input type="text" v-model="nuova.daFare">
-                <button @click="aggiungi()">aggiungi</button>
+                <input @keyup.enter="aggiungi()" type="text" v-model="nuova.daFare">
+                <button class="btn btn-warning m-2" @click="aggiungi()">aggiungi</button>
                 <ul>
-                    <li v-for="(cosa,i) in cose" :class="(this.cose[i].fatto==true) ? 'true' : ''">{{cosa.daFare}}   {{cosa.fatto}}
-                        <button @click="rimuovi(i)">x</button>
-                        <button @click="fatto(i)">fatto</button>
+                    <li v-for="(cosa,i) in cose" :class="(this.cose[i].fatto==true) ? 'true' : ''" class="badge">{{cosa.daFare}}   {{cosa.fatto}}
+                        <button class="btn btn-warning m-2" @click="rimuovi(i)">x</button>
+                        <button class="btn btn-warning m-2" @click="fatto(i)">fatto</button>
                     </li>
                 </ul>
             </div>
