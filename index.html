@@ -17,7 +17,7 @@
                 <input type="text" v-model="nuova.daFare">
                 <button @click="aggiungi()">aggiungi</button>
                 <ul>
-                    <li v-for="(cosa,i) in cose" :class="">{{cosa}}
+                    <li v-for="(cosa,i) in cose" :class="">{{cosa.daFare}}   {{cosa.fatto}}
                         <button @click="rimuovi(i)">x</button>
                         <button @click="fatto(i)">fatto</button>
                     </li>
